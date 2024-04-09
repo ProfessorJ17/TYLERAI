@@ -1,3 +1,5 @@
+import hashlib
+import uuid
 import random
 import time
 
@@ -21,8 +23,18 @@ def TYLER_AI():
     print("\nConnection established. Scanning for anomalies...\n")
 
     # Anomaly detection
-    anomalies = ["Entity detected in sector 23", "Quantum flux detected in neural network",
-                 "Cryptic message received from unknown source"]
+    anomalies = [
+        "Temporal distortion detected near black hole ⏳🕳️",
+        "Dimensional rift observed in quantum field 🌀🔍",
+        "Ethereal resonance detected in cosmic background radiation 🌌🎶",
+        "Unknown energy signature detected in deep space 🌠🔍",
+        "Anomalous quantum entanglement discovered in subatomic particles 🧬🔗",
+        "Inexplicable fluctuations detected in gravitational waves 🌊📈",
+        "Unidentified anomaly detected in dark matter distribution 🌑❓",
+        "Spontaneous manifestation of exotic matter observed in laboratory 🧪✨",
+        "Unprecedented cosmic event recorded by observatories 🌌📡",
+        "Anomalous data transmission intercepted from parallel universe 🌐🔒"
+    ]
     for _ in range(3):
         print("Anomaly detected: " + random.choice(anomalies) + " " + random_emoji() + " ~" + str(random_delay()) + "ms")
         time.sleep(random_delay() / 1000)
@@ -39,7 +51,7 @@ def TYLER_AI():
     print("🔑🤖🔓 TYLER AI protocol activated. Decrypting messages...\n")
 
     # Decryption process
-    encrypted_messages = ["8374KJHD23LD0AJSD89S", "21HJLA4G76AHDLW98", "POIUYTREWQZXCVBNM"]
+    encrypted_messages = [generate_random_md5() for _ in range(3)]
     for message in encrypted_messages:
         print("Decrypting message: " + message + " -> " + decrypt_message(message) + " " + random_emoji() + " ~" + str(random_delay()) + "ms")
         time.sleep(random_delay() / 1000)
@@ -48,6 +60,16 @@ def TYLER_AI():
     print("🚀🌀👽 Initiating transcendence...\n")
     print("Error: Glitch in reality detected. Transcendence aborted.\n")
     print("Disconnecting from TYLER network. Exiting TYLER AI.")
+
+# Function to generate a random MD5 hash
+def generate_random_md5():
+    # Generate a random UUID
+    random_uuid = str(uuid.uuid4())
+    # Hash the UUID using MD5
+    md5_hash = hashlib.md5(random_uuid.encode()).hexdigest()
+    return md5_hash
+
+# Other functions...
 
 def random_cipher():
     ciphers = ["AES-256", "RSA", "SHA-512", "MD5", "Base64"]
@@ -258,9 +280,6 @@ TYLER_AI()
 
 # Run the simulation
 startEndOfWorldSimulation()
-
-
-
 
 # Run the end of the world scenario
 end_of_world_scenario()
